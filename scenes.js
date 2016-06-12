@@ -223,7 +223,8 @@ var GameScene = Class.create(Scene, {
 			if(!this.pause){
 				var torpedo = new Torpedo(player.x+7/16*player.width, player.y-20, "player");
 				_torpedoes.addChild(torpedo);
-				pewSound.play();
+				// Sounds no longer play properly, so commented this out until fixed. TODO get a new engine
+				//pewSound.play();
 			}else{
 				this.gameover();
 			}
@@ -298,7 +299,8 @@ var GameScene = Class.create(Scene, {
 							{
 								this.enemy[x].move("down");
 							}
-							beepSound.play();
+							// TODO: Fix sounds in Enchant.js or find another engine
+							//beepSound.play();
 							this.enemy[x].count++;
 							if(this.enemy[x].count == 20)
 								this.enemy[x].count = 0;
